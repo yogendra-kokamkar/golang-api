@@ -40,3 +40,10 @@ go run main.go
 http://localhost:8000/account/coins?username=Yogendra
 ```
 Note - Add Authentication in Headers.
+
+Details Found (Correct Credentials)
+![image](https://github.com/user-attachments/assets/c01037b3-04c5-4ba4-989c-a2aa8f542e45)
+
+Details Not Found (Incorrect Credentials)
+![image](https://github.com/user-attachments/assets/09f9dcd0-7768-43d6-823c-5ee7bb5525bd)
+
