@@ -5,24 +5,26 @@ import (
 	"net/http"
 )
 
-// Coin Balance Params
+// Coint Balance Params
 type CoinBalanceParams struct {
 	Username string
 }
 
 // Coin Balance Response
 type CoinBalanceResponse struct {
-	// success code, usually 200
-	code int
-	//Account Balance
+	// Success Code, Usually 200
+	Code int
+
+	// Account Balance
 	Balance int64
 }
 
 // Error Response
 type Error struct {
-	// Error Code
+	// Error code
 	Code int
-	// Error Message
+
+	// Error message
 	Message string
 }
 
@@ -39,7 +41,7 @@ func writeError(w http.ResponseWriter, message string, code int) {
 }
 
 var (
-	RequestErrorHandler = func(w http.ResponseWriter, err error) {
+	RequestErrorHandler = func(w http.ResponseWriter,  err error) {
 		writeError(w, err.Error(), http.StatusBadRequest)
 	}
 	InternalErrorHandler = func(w http.ResponseWriter) {
